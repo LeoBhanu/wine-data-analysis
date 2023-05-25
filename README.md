@@ -1,9 +1,11 @@
 # Output Screens
 Desktop View:
-![Screenshot 2023-05-25 101112](https://github.com/LeoBhanu/wine-data-analysis/assets/62637609/3823f029-b6f3-4a84-922e-f43f5732f98b)
+![Screenshot 2023-05-25 152333](https://github.com/LeoBhanu/wine-data-analysis/assets/62637609/778dbb48-e225-4e61-86fd-fcc80e33856d)
+
 Mobile View:
 
-![Screenshot 2023-05-25 101138](https://github.com/LeoBhanu/wine-data-analysis/assets/62637609/a329e7fd-54d5-44b0-b950-07b945a8ab19)
+![Screenshot 2023-05-25 152355](https://github.com/LeoBhanu/wine-data-analysis/assets/62637609/d381b7d4-f15b-49e0-b29e-0df37413ff21)
+
 
 # Getting Started with Create React App
 
