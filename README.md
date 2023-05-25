@@ -1,11 +1,16 @@
+# Output Screens
+Desktop View:
+![Screenshot 2023-05-25 101112](https://github.com/LeoBhanu/wine-data-analysis/assets/62637609/3823f029-b6f3-4a84-922e-f43f5732f98b)
+Mobile View:
+
+![Screenshot 2023-05-25 101138](https://github.com/LeoBhanu/wine-data-analysis/assets/62637609/a329e7fd-54d5-44b0-b950-07b945a8ab19)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
-
 In the project directory, you can run:
-
 ### `yarn start`
 
 Runs the app in the development mode.\
