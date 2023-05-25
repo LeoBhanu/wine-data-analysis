@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import React, { useEffect, useState } from 'react';
+import Table from './Table';
+
+import { FlavanoidsAnalysisObject, GammaAnalysisObject } from './types';
+import { getAlcoholClassList, getFlavanoidAnalysis, getGammaAnalysis } from './utilities';
 
 function App() {
+  const [classList, setClassList] = useState<string[]>([]);
+  const [flavanoidAnalysis, setFlavanoidAnalysis] = useState<string[][]>([]);
+  const [gammaAnalysis, setGammaAnalysis] = useState<string[][]>([]);
+
+  useEffect(()=>{
+    setClassList(getAlcoholClassList())
+    setFlavanoidAnalysis(getFlavanoidAnalysis())
+    setGammaAnalysis(getGammaAnalysis())
+  },[])
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Wine Data Analysis</h1>
+      <div className="main-cointainer">
+        <Table heading={'Flavanoids Analysis'} classList={classList} list={flavanoidAnalysis} />
+        <Table heading={'Gamma Analysis'} classList={classList} list={gammaAnalysis} />
+      </div>
     </div>
   );
 }
