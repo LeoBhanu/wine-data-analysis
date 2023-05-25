@@ -15,7 +15,7 @@ wineData.forEach((item: WineData) => {
 // classWiseGamma is a filtered object with Key as alcohol class and value as array of gamma of each data object
 let classWiseGamma: classWiseGammaType = {};
 wineData.forEach((item: WineData) => {
-    let gamma = (item.Ash * item.Hue) / item.Magnesium;
+    let gamma = Number(((item.Ash * item.Hue) / item.Magnesium).toFixed(3));
 
     if (classWiseGamma[item['Alcohol']]) {
         classWiseGamma[item['Alcohol']].push(gamma)
@@ -53,6 +53,7 @@ const median = (arr: number[]) => {
 const mode = (arr: number[]) => {
     let tempObj: typeTempObj = {}
     let mode: number = -1;
+    let high: number = 0;
 
     for (let i = 0; i < arr.length; i++) {
         if (tempObj[arr[i]]) {
@@ -63,10 +64,12 @@ const mode = (arr: number[]) => {
     }
 
     for (let key in tempObj) {
-        if (mode < tempObj[key])
+        if(tempObj[key] > high){
+            high = tempObj[key]
             mode = Number(key)
+        }
     }
-
+    
     return mode.toFixed(3);
 }
 
